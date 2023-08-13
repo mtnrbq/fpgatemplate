@@ -12,7 +12,7 @@
 		// 	"channels": "conda-forge"
 		// },
 		//"ghcr.io/devcontainers/features/sshd:1": {}
-		// "ghcr.io/devcontainers-contrib/features/starship:1": {},
+		"ghcr.io/devcontainers-contrib/features/starship:1": {}
 		// "ghcr.io/wxw-matt/devcontainer-features/apt:0": {
 		// 	"packages":"python3-pip gtkwave usbutils"
 		// },
@@ -33,6 +33,7 @@
 	// "postCreateCommand": "python --version",
 	// "updateContentCommand": "echo \"export STARSHIP_CONFIG=/workspaces/fpgatemplate/.devcontainer/config/starship.toml\" >> /home/vscode/.bashrc",
 	// "postCreateCommand": "echo \"eval \\\"\\$(starship init bash)\\\" \" >> /home/vscode/.bashrc",	
+	"postCreateCommand": "cat /workspaces/fpgatemplate/.devcontainer/config/addtobashrc >> /home/vscode/.bashrc",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
@@ -41,7 +42,7 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": {},
-			"extensions": ["mshr-h.veriloghdl","ms-vscode.hexeditor"]
+			"extensions": ["mshr-h.veriloghdl","ms-vscode.hexeditor","wavetrace.wavetrace"]
 		}
 	}
 
